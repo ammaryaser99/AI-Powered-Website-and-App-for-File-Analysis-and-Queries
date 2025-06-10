@@ -1,0 +1,9 @@
+Flask>=2.2
+Flask-Cors
+Flask-SQLAlchemy
+pymupdf
+python-docx
+openpyxl
+pandas
+sentence-transformers
+chromadb

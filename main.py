@@ -9,6 +9,7 @@ from src.models.user import db
 from src.models.document import Document, DocumentChunk, Conversation
 from src.routes.user import user_bp
 from src.routes.document import document_bp
+from src.routes.qa import qa_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'
@@ -20,6 +21,7 @@ CORS(app, origins="*")
 # Register blueprints
 app.register_blueprint(user_bp, url_prefix='/api')
 app.register_blueprint(document_bp, url_prefix='/api')
+app.register_blueprint(qa_bp, url_prefix='/api')
 
 # Database configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(os.path.dirname(__file__), 'database', 'app.db')}"
