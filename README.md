@@ -46,6 +46,7 @@ python main.py
 
 The API will be available at `http://localhost:5000/api`.
 
+A simple placeholder page is served at `http://localhost:5000`.
 Uploaded files are stored in the `src/uploads` directory and a SQLite database is created under `database/app.db` on first run.
 
 ## Notes
